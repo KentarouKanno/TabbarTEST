@@ -4,21 +4,21 @@ provides:
 nominals:
 - "C21Fake_Apple_MusicTests21Fake_Apple_MusicTests"
 class-members:
-- "tearDown"
+- "setUp"
 - "testExample"
 - "testPerformanceExample"
-- "setUp"
+- "tearDown"
 top-level:
-- "XCTestCase"
-- !private "XCTAssert"
 - !private "BooleanLiteralType"
 - !private "StringLiteralType"
+- "XCTestCase"
+- !private "XCTAssert"
 member-access:
-- "CSo6XCTest"
-- !private "C21Fake_Apple_MusicTests21Fake_Apple_MusicTests"
-- "PSs9AnyObject"
 - "CSo10XCTestCase"
 - "CSo8NSObject"
+- "PSs9AnyObject"
+- "CSo6XCTest"
+- !private "C21Fake_Apple_MusicTests21Fake_Apple_MusicTests"
 dynamic-lookup:
 cross-module:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/Swift.swiftmodule"

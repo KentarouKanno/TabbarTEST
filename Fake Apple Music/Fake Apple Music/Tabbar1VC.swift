@@ -10,10 +10,19 @@ import Foundation
 import UIKit
 
 class Tabbar1VC: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
     
+    let data = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
+        for i in 0...100 {
+            
+            self.data.addObject("IndexPath.row = \(i)")
+        }
         
         let modalV = ModalView.instance()
         modalV.frame = CGRectMake(0,self.view.frame.size.height - 44 - 49, self.view.frame.size.width, self.view.frame.size.height + 64);
@@ -21,6 +30,27 @@ class Tabbar1VC: UIViewController {
         
         modalV.superV = self
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    /*
+    Cellに値を設定するデータソースメソッド.
+    (実装必須)
+    */
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // 再利用するCellを取得する.
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        
+        // Cellに値を設定する.
+        cell.textLabel!.text = "\(data[indexPath.row])"
+        
+        return cell
+    }
+    
+
     
     func setTabBarVisible(visible:Bool, animated:Bool) {
         

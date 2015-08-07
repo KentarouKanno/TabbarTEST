@@ -119,11 +119,19 @@ SWIFT_CLASS("_TtC16Fake_Apple_Music9ModalView")
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSMutableArray;
+@class UITableView;
+@class NSIndexPath;
+@class UITableViewCell;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC16Fake_Apple_Music9Tabbar1VC")
 @interface Tabbar1VC : UIViewController
+@property (nonatomic, weak) IBOutlet UITableView * __null_unspecified tableView;
+@property (nonatomic, readonly) NSMutableArray * __nonnull data;
 - (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (void)setTabBarVisible:(BOOL)visible animated:(BOOL)animated;
 - (BOOL)tabBarIsVisible;
 - (void)didReceiveMemoryWarning;

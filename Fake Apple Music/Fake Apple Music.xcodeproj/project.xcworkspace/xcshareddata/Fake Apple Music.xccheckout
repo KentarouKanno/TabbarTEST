@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F55057D3-2A31-4CB7-9D0D-2FCA59C5F991</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Fake Apple Music</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B13AAD6FEBCA584B08CA963C8B639286628824FE</key>
+		<string>https://github.com/KentarouKanno/TabbarTEST.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Fake Apple Music/Fake Apple Music.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B13AAD6FEBCA584B08CA963C8B639286628824FE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KentarouKanno/TabbarTEST.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B13AAD6FEBCA584B08CA963C8B639286628824FE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B13AAD6FEBCA584B08CA963C8B639286628824FE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TabbarTEST</string>
+		</dict>
+	</array>
+</dict>
+</plist>
