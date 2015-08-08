@@ -113,7 +113,7 @@ SWIFT_CLASS("_TtC16Fake_Apple_Music11AppDelegate")
 SWIFT_CLASS("_TtC16Fake_Apple_Music9ModalView")
 @interface ModalView : UIView
 @property (nonatomic) Tabbar1VC * __null_unspecified superV;
-@property (nonatomic) CGRect rect;
+@property (nonatomic, readonly) double animationDuration;
 + (ModalView * __nonnull)instance;
 - (IBAction)pushHeader:(id __nonnull)sender;
 - (IBAction)pushDown:(id __nonnull)sender;
@@ -125,7 +125,6 @@ SWIFT_CLASS("_TtC16Fake_Apple_Music9ModalView")
 @end
 
 @class NSMutableArray;
-@class UIPanGestureRecognizer;
 @class UITableView;
 @class NSIndexPath;
 @class UITableViewCell;
@@ -134,13 +133,13 @@ SWIFT_CLASS("_TtC16Fake_Apple_Music9ModalView")
 SWIFT_CLASS("_TtC16Fake_Apple_Music9Tabbar1VC")
 @interface Tabbar1VC : UIViewController <UIGestureRecognizerDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * __null_unspecified tableView;
+@property (nonatomic, readonly) double animationDuration;
 @property (nonatomic) ModalView * __null_unspecified modalV;
 @property (nonatomic, readonly) NSMutableArray * __nonnull data;
 - (void)viewDidLoad;
-- (void)panGesture:(UIPanGestureRecognizer * __nonnull)gesture;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
-- (void)setTabBarVisible:(BOOL)visible animated:(BOOL)animated;
+- (void)setTabBarVisible:(BOOL)visible duration:(NSTimeInterval)duration;
 - (BOOL)tabBarIsVisible;
 - (void)didReceiveMemoryWarning;
 - (void)touchesBegan:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;

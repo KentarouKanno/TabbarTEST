@@ -9,27 +9,27 @@
 import Foundation
 import UIKit
 
+
 class ModalView : UIView {
     
     var superV: Tabbar1VC!
-    
-    var rect:CGRect = CGRect()
+    let animationDuration = 0.5
     
     class func instance() -> ModalView {
         return UINib(nibName: "ModalView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! ModalView
     }
     
-    
     @IBAction func pushHeader(sender: AnyObject) {
-        superV.upModalView(0.5)
-        superV.setTabBarVisible(false, animated: true)
+        superV.upModalView(animationDuration)
+        superV.setTabBarVisible(false, duration: animationDuration)
     }
     
     @IBAction func pushDown(sender: AnyObject) {
-        superV.downModalView(0.5)
-        superV.setTabBarVisible(true, animated: true)
+        superV.downModalView(animationDuration)
+        superV.setTabBarVisible(true, duration: animationDuration)
     }
     
+
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.nextResponder()?.touchesBegan(touches, withEvent: event)
     }
