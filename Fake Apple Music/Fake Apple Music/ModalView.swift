@@ -21,26 +21,24 @@ class ModalView : UIView {
     
     
     @IBAction func pushHeader(sender: AnyObject) {
-        
-        rect = self.frame;
-        
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.frame = CGRectMake(0, -64, self.frame.size.width, self.frame.size.height + 64)
-        })
-            
+        superV.upModalView(0.5)
         superV.setTabBarVisible(false, animated: true)
     }
     
     @IBAction func pushDown(sender: AnyObject) {
-        
-        UIView.animateWithDuration(0.5, animations: { () -> Void in
-            self.frame = self.rect
-        })
-        
+        superV.downModalView(0.5)
         superV.setTabBarVisible(true, animated: true)
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.nextResponder()?.touchesBegan(touches, withEvent: event)
+    }
     
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.nextResponder()?.nextResponder()?.touchesMoved(touches, withEvent: event)
+    }
     
-    
+    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.nextResponder()?.nextResponder()?.touchesEnded(touches, withEvent: event)
+    }
 }

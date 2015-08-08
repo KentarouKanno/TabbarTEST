@@ -162,6 +162,7 @@
 		365238961B74FDD900F2334B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = KentarOu;
 				TargetAttributes = {
@@ -417,6 +418,7 @@
 				365238BF1B74FDDA00F2334B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		365238C01B74FDDA00F2334B /* Build configuration list for PBXNativeTarget "Fake Apple MusicTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +427,7 @@
 				365238C21B74FDDA00F2334B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

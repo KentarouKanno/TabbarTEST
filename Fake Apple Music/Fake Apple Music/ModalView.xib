@@ -10,19 +10,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHr-Cq-rpN">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
-                    <color key="backgroundColor" red="0.675745716" green="1" blue="0.60753281670000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="8uI-lx-NV1"/>
-                    </constraints>
-                    <state key="normal">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="pushHeader:" destination="iN0-l3-epB" eventType="touchUpInside" id="AX9-Av-Ofp"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcY-k0-QRb">
                     <rect key="frame" x="29" y="80" width="55" height="48"/>
                     <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,10 +24,23 @@
                         <action selector="pushDown:" destination="iN0-l3-epB" eventType="touchUpInside" id="gGn-iv-M6M"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHr-Cq-rpN">
+                    <rect key="frame" x="0.0" y="0.0" width="163" height="45"/>
+                    <color key="backgroundColor" red="0.675745716" green="1" blue="0.60753281670000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="8uI-lx-NV1"/>
+                        <constraint firstAttribute="width" constant="163" id="DO3-mz-jSG"/>
+                    </constraints>
+                    <state key="normal" title="↑">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="pushHeader:" destination="iN0-l3-epB" eventType="touchUpInside" id="AX9-Av-Ofp"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="0.82638700123701825" blue="0.91102520206667736" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="LHr-Cq-rpN" secondAttribute="trailing" id="0za-VM-vz2"/>
                 <constraint firstItem="LHr-Cq-rpN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="C5T-K2-6Si"/>
                 <constraint firstItem="LHr-Cq-rpN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C6W-l8-zcA"/>
                 <constraint firstItem="QcY-k0-QRb" firstAttribute="top" secondItem="LHr-Cq-rpN" secondAttribute="bottom" constant="35" id="Hew-Ty-QO9"/>

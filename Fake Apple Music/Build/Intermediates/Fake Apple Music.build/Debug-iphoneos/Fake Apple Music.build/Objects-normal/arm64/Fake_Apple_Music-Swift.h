@@ -85,6 +85,7 @@ typedef struct _NSZone NSZone;
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -106,6 +107,7 @@ SWIFT_CLASS("_TtC16Fake_Apple_Music11AppDelegate")
 @end
 
 @class Tabbar1VC;
+@class UIEvent;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC16Fake_Apple_Music9ModalView")
@@ -115,26 +117,37 @@ SWIFT_CLASS("_TtC16Fake_Apple_Music9ModalView")
 + (ModalView * __nonnull)instance;
 - (IBAction)pushHeader:(id __nonnull)sender;
 - (IBAction)pushDown:(id __nonnull)sender;
+- (void)touchesBegan:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)touchesMoved:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)touchesEnded:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSMutableArray;
+@class UIPanGestureRecognizer;
 @class UITableView;
 @class NSIndexPath;
 @class UITableViewCell;
 @class NSBundle;
 
 SWIFT_CLASS("_TtC16Fake_Apple_Music9Tabbar1VC")
-@interface Tabbar1VC : UIViewController
+@interface Tabbar1VC : UIViewController <UIGestureRecognizerDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * __null_unspecified tableView;
+@property (nonatomic) ModalView * __null_unspecified modalV;
 @property (nonatomic, readonly) NSMutableArray * __nonnull data;
 - (void)viewDidLoad;
+- (void)panGesture:(UIPanGestureRecognizer * __nonnull)gesture;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (void)setTabBarVisible:(BOOL)visible animated:(BOOL)animated;
 - (BOOL)tabBarIsVisible;
 - (void)didReceiveMemoryWarning;
+- (void)touchesBegan:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)touchesMoved:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
+- (void)upModalView:(NSTimeInterval)duration;
+- (void)downModalView:(NSTimeInterval)duration;
+- (void)touchesEnded:(NSSet * __nonnull)touches withEvent:(UIEvent * __nonnull)event;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (SWIFT_NULLABILITY(nonnull) instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
