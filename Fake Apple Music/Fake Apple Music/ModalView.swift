@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class ModalView : UIView {
     
     var superV: Tabbar1VC!
